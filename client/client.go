@@ -61,7 +61,7 @@ func (this *AuthAdminService) GetAccessRequests() (accessReqs []*qortexapi.Acces
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/GetAccessRequests.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/GetAccessRequests.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -113,7 +113,7 @@ func (this *AuthAdminService) ExportAllUsers() (memberInfos []*qortexapi.MailChi
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ExportAllUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ExportAllUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -165,7 +165,7 @@ func (this *AuthAdminService) ExportChineseUsers() (memberInfos []*qortexapi.Mai
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ExportChineseUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ExportChineseUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -217,7 +217,7 @@ func (this *AuthAdminService) ExportEnglishUsers() (memberInfos []*qortexapi.Mai
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ExportEnglishUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ExportEnglishUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -269,7 +269,7 @@ func (this *AuthAdminService) ExportJapaneseUsers() (memberInfos []*qortexapi.Ma
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ExportJapaneseUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ExportJapaneseUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -323,7 +323,7 @@ func (this *AuthAdminService) ChangeMemberEmail(input *qortexapi.ChangeEmailInpu
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ChangeMemberEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ChangeMemberEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -373,7 +373,7 @@ func (this *AuthAdminService) GetTotalOnlineUsers() (embedUsers []*qortexapi.Emb
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/GetTotalOnlineUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/GetTotalOnlineUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -428,7 +428,7 @@ func (this *AuthAdminService) MarkOrgFreeOrPay(orgId string) (free bool, err err
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/MarkOrgFreeOrPay.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/MarkOrgFreeOrPay.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -480,7 +480,7 @@ func (this *AuthAdminService) GetOrgPayment() (orgPaymentInfos []*qortexapi.OrgP
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/GetOrgPayment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/GetOrgPayment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -535,7 +535,7 @@ func (this *AuthAdminService) GetPaymentHistory(orgId string) (history []qortexa
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/GetPaymentHistory.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/GetPaymentHistory.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -590,7 +590,7 @@ func (this *AuthAdminService) SetTrial(orgId string, deadLine string) (err error
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/SetTrial.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/SetTrial.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -643,7 +643,7 @@ func (this *AuthAdminService) SetExpiredAt(orgId string, deadLine string) (err e
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/SetExpiredAt.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/SetExpiredAt.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -695,7 +695,7 @@ func (this *AuthAdminService) SendPaymentWarnEmail(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/SendPaymentWarnEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/SendPaymentWarnEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -745,7 +745,7 @@ func (this *AuthAdminService) GetMinOrgs() (orgInfos []*qortexapi.MinOrgInfo, er
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/GetMinOrgs.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/GetMinOrgs.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -800,7 +800,7 @@ func (this *AuthAdminService) GetOrgUserCache(orgId string) (orgUserCache *qorte
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/GetOrgUserCache.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/GetOrgUserCache.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -854,7 +854,7 @@ func (this *AuthAdminService) ResetOrgUserCache(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ResetOrgUserCache.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ResetOrgUserCache.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -907,7 +907,7 @@ func (this *AuthAdminService) SetFreeUserLimit(orgId string, num int) (err error
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/SetFreeUserLimit.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/SetFreeUserLimit.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -960,7 +960,7 @@ func (this *AuthAdminService) ResetCount(orgId string, groupId string) (err erro
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthAdminService/ResetCount.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthAdminService/ResetCount.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1017,7 +1017,7 @@ func (this *AuthMemberService) GetNewOrganization(memberId string) (org *qortexa
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/GetNewOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/GetNewOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1069,7 +1069,7 @@ func (this *AuthMemberService) GetMyOrganizations() (orgs []*qortexapi.Organizat
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/GetMyOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/GetMyOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1124,7 +1124,7 @@ func (this *AuthMemberService) CreateOrganization(input *qortexapi.OrganizationI
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/CreateOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/CreateOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1178,7 +1178,7 @@ func (this *AuthMemberService) JoinOrganization(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/JoinOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/JoinOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1230,7 +1230,7 @@ func (this *AuthMemberService) LeaveOrganization(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/LeaveOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/LeaveOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1282,7 +1282,7 @@ func (this *AuthMemberService) SwitchOrganization(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/SwitchOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/SwitchOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1336,7 +1336,7 @@ func (this *AuthMemberService) GetAbandonInfo(abandonOrgId string, memberId stri
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/GetAbandonInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/GetAbandonInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1391,7 +1391,7 @@ func (this *AuthMemberService) GetShareRequest(token string) (shareRequest *qort
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/GetShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/GetShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1445,7 +1445,7 @@ func (this *AuthMemberService) RejectShareRequestByInvitee(token string) (err er
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/RejectShareRequestByInvitee.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/RejectShareRequestByInvitee.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1498,7 +1498,7 @@ func (this *AuthMemberService) AcceptShareRequestByInvitee(token string, toOrgId
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthMemberService/AcceptShareRequestByInvitee.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthMemberService/AcceptShareRequestByInvitee.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1556,7 +1556,7 @@ func (this *AuthUserService) GetNewEntry(groupId string) (entry *qortexapi.Entry
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetNewEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetNewEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1611,7 +1611,7 @@ func (this *AuthUserService) GetNewChatEntry(input *qortexapi.NewChatInput) (ent
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetNewChatEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetNewChatEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1668,7 +1668,7 @@ func (this *AuthUserService) GetQortexSupportEntries(before string, limit int, w
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetQortexSupportEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetQortexSupportEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1723,7 +1723,7 @@ func (this *AuthUserService) CreateEntry(input *qortexapi.EntryInput) (entry *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1778,7 +1778,7 @@ func (this *AuthUserService) CreateTask(input *qortexapi.EntryInput) (entry *qor
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1835,7 +1835,7 @@ func (this *AuthUserService) CloseTask(entryId string, groupId string, taskId st
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CloseTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CloseTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1890,7 +1890,7 @@ func (this *AuthUserService) UpdateTask(taskInput *qortexapi.TaskInput) (task *q
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -1945,7 +1945,7 @@ func (this *AuthUserService) CreateComment(input *qortexapi.EntryInput) (entry *
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2002,7 +2002,7 @@ func (this *AuthUserService) GetComment(entryId string, groupId string, language
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2059,7 +2059,7 @@ func (this *AuthUserService) EditComment(entryId string, groupId string, languag
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/EditComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/EditComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2114,7 +2114,7 @@ func (this *AuthUserService) UpdateComment(input *qortexapi.EntryInput) (entry *
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2169,7 +2169,7 @@ func (this *AuthUserService) UpdateEntry(input *qortexapi.EntryInput) (entry *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2225,7 +2225,7 @@ func (this *AuthUserService) UpdateKnowledgebase(groupId string, entryId string,
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateKnowledgebase.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateKnowledgebase.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2279,7 +2279,7 @@ func (this *AuthUserService) GetLatestUpdatedEntryIdByTitle(title string, groupI
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetLatestUpdatedEntryIdByTitle.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetLatestUpdatedEntryIdByTitle.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2335,7 +2335,7 @@ func (this *AuthUserService) GetTitle(groupId string, entryId string) (title str
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetTitle.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetTitle.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2394,7 +2394,7 @@ func (this *AuthUserService) GetEntry(entryId string, groupId string, updateAtUn
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2453,7 +2453,7 @@ func (this *AuthUserService) SwitchEntryVersion(entryId string, groupId string, 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SwitchEntryVersion.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SwitchEntryVersion.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2512,7 +2512,7 @@ func (this *AuthUserService) EditEntry(entryId string, groupId string, updateAtU
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/EditEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/EditEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2572,7 +2572,7 @@ func (this *AuthUserService) EditTranslation(entryId string, groupId string, upd
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/EditTranslation.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/EditTranslation.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2629,7 +2629,7 @@ func (this *AuthUserService) SwitchEntryLanguage(entryId string, groupId string,
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SwitchEntryLanguage.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SwitchEntryLanguage.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2685,7 +2685,7 @@ func (this *AuthUserService) GetKnowledgeOverview(groupId string, languageCode s
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetKnowledgeOverview.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetKnowledgeOverview.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2742,7 +2742,7 @@ func (this *AuthUserService) SwitchKnowledgeOverviewVersion(groupId string, entr
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SwitchKnowledgeOverviewVersion.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SwitchKnowledgeOverviewVersion.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2797,7 +2797,7 @@ func (this *AuthUserService) UpdateKnowledgeOverview(input *qortexapi.KnowledgeO
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateKnowledgeOverview.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateKnowledgeOverview.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2853,7 +2853,7 @@ func (this *AuthUserService) GetEntryToTranslate(entryId string, groupId string)
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetEntryToTranslate.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetEntryToTranslate.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2909,7 +2909,7 @@ func (this *AuthUserService) GetWikiSectionToTranslate(entryId string, groupId s
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetWikiSectionToTranslate.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetWikiSectionToTranslate.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -2966,7 +2966,7 @@ func (this *AuthUserService) DeleteEntry(entryId string, groupId string, dType s
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3023,7 +3023,7 @@ func (this *AuthUserService) DeleteEntryTranslation(entryId string, groupId stri
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteEntryTranslation.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteEntryTranslation.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3078,7 +3078,7 @@ func (this *AuthUserService) MuteEntry(entryId string, groupId string) (err erro
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MuteEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MuteEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3131,7 +3131,7 @@ func (this *AuthUserService) UndoMuteEntry(entryId string, groupId string) (err 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UndoMuteEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UndoMuteEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3181,7 +3181,7 @@ func (this *AuthUserService) GetMachineTranslatableLangauges() (options *qortexa
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMachineTranslatableLangauges.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMachineTranslatableLangauges.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3240,7 +3240,7 @@ func (this *AuthUserService) SingleEntryMachineTranslate(entryId string, groupId
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SingleEntryMachineTranslate.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SingleEntryMachineTranslate.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3298,7 +3298,7 @@ func (this *AuthUserService) MachineTranslate(entryId string, groupId string, cu
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MachineTranslate.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MachineTranslate.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3357,7 +3357,7 @@ func (this *AuthUserService) SingleWikiSectionMachineTranslate(entryId string, g
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SingleWikiSectionMachineTranslate.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SingleWikiSectionMachineTranslate.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3414,7 +3414,7 @@ func (this *AuthUserService) MachineTranslateWikiSection(entryId string, groupId
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MachineTranslateWikiSection.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MachineTranslateWikiSection.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3470,7 +3470,7 @@ func (this *AuthUserService) OriginalThread(entryId string, groupId string) (tra
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/OriginalThread.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/OriginalThread.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3526,7 +3526,7 @@ func (this *AuthUserService) GetEntryAttachments(entryId string, groupId string)
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetEntryAttachments.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetEntryAttachments.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3583,7 +3583,7 @@ func (this *AuthUserService) GetDocViewSession(doi string, groupId string, attac
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetDocViewSession.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetDocViewSession.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3640,7 +3640,7 @@ func (this *AuthUserService) GetOtherVersionsComments(entryId string, groupId st
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOtherVersionsComments.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOtherVersionsComments.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3697,7 +3697,7 @@ func (this *AuthUserService) GetOtherVersionsTaskLogs(entryId string, groupId st
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOtherVersionsTaskLogs.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOtherVersionsTaskLogs.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3756,7 +3756,7 @@ func (this *AuthUserService) GetGroupEntries(groupId string, entryType string, b
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3814,7 +3814,7 @@ func (this *AuthUserService) GetMyFeedEntries(entryType string, before string, l
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyFeedEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyFeedEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3872,7 +3872,7 @@ func (this *AuthUserService) GetMyFeedEntriesV2(before string, limit int, withCo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyFeedEntriesV2.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyFeedEntriesV2.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3924,7 +3924,7 @@ func (this *AuthUserService) GetGroupAside() (ga *qortexapi.GroupAside, err erro
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupAside.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupAside.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -3976,7 +3976,7 @@ func (this *AuthUserService) GetNewGroupAside() (nga *qortexapi.NewGroupAside, e
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetNewGroupAside.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetNewGroupAside.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4028,7 +4028,7 @@ func (this *AuthUserService) GetGroupAsideV2() (ga *qortexapi.NewGroupAside, err
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupAsideV2.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupAsideV2.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4084,7 +4084,7 @@ func (this *AuthUserService) GetMyFeedEntriesLite(before string, limit int) (ent
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyFeedEntriesLite.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyFeedEntriesLite.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4141,7 +4141,7 @@ func (this *AuthUserService) GetNewFeedEntries(entryType string, fromTimeUnixNan
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetNewFeedEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetNewFeedEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4199,7 +4199,7 @@ func (this *AuthUserService) GetUserEntries(userId string, entryType string, bef
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetUserEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetUserEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4254,7 +4254,7 @@ func (this *AuthUserService) GetUserEntriesV2(input *qortexapi.UserEntriesInput)
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetUserEntriesV2.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetUserEntriesV2.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4310,7 +4310,7 @@ func (this *AuthUserService) GetMyNotifications(before string, limit int) (mynot
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyNotifications.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyNotifications.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4366,7 +4366,7 @@ func (this *AuthUserService) GetMyNotificationItems(before string, limit int) (n
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyNotificationItems.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyNotificationItems.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4421,7 +4421,7 @@ func (this *AuthUserService) MarkAllAsRead(groupId string) (mycount *qortexapi.M
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MarkAllAsRead.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MarkAllAsRead.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4477,7 +4477,7 @@ func (this *AuthUserService) GetWatchList(before string, limit int) (watchlist *
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetWatchList.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetWatchList.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4533,7 +4533,7 @@ func (this *AuthUserService) AddToWatchList(entryId string, groupId string, remi
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AddToWatchList.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AddToWatchList.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4586,7 +4586,7 @@ func (this *AuthUserService) StopWatching(entryId string, groupId string) (err e
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/StopWatching.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/StopWatching.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4636,7 +4636,7 @@ func (this *AuthUserService) RemindMe() (reminded bool, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/RemindMe.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/RemindMe.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4692,7 +4692,7 @@ func (this *AuthUserService) StartSmartReminding(groupId string, watchItemId str
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/StartSmartReminding.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/StartSmartReminding.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4748,7 +4748,7 @@ func (this *AuthUserService) StopReminding(groupId string, watchItemId string) (
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/StopReminding.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/StopReminding.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4803,7 +4803,7 @@ func (this *AuthUserService) UpdateLike(input *qortexapi.LikeInput) (entry *qort
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateLike.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateLike.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4858,7 +4858,7 @@ func (this *AuthUserService) CreateDraft(input *qortexapi.DraftInput) (draft *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateDraft.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateDraft.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4914,7 +4914,7 @@ func (this *AuthUserService) GetDraftList(before string, limit int) (draftlist *
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetDraftList.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetDraftList.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -4970,7 +4970,7 @@ func (this *AuthUserService) GetDraft(entryId string, groupId string) (entry *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetDraft.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetDraft.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5025,7 +5025,7 @@ func (this *AuthUserService) DeleteDraft(entryId string, groupId string) (err er
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteDraft.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteDraft.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5074,7 +5074,7 @@ func (this *AuthUserService) ChooseMarkdownEditor() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ChooseMarkdownEditor.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ChooseMarkdownEditor.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5123,7 +5123,7 @@ func (this *AuthUserService) ChooseStyledEditor() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ChooseStyledEditor.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ChooseStyledEditor.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5173,7 +5173,7 @@ func (this *AuthUserService) GetNewGroup() (group *qortexapi.Group, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetNewGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetNewGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5228,7 +5228,7 @@ func (this *AuthUserService) GetGroup(groupId string) (group *qortexapi.Group, e
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5283,7 +5283,7 @@ func (this *AuthUserService) CreateGroup(input *qortexapi.GroupInput) (group *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5338,7 +5338,7 @@ func (this *AuthUserService) UpdateGroup(input *qortexapi.GroupInput) (group *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5393,7 +5393,7 @@ func (this *AuthUserService) UpdateGroupLogo(groupId string, logoURL string) (er
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateGroupLogo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateGroupLogo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5445,7 +5445,7 @@ func (this *AuthUserService) DeleteGroup(groupId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5498,7 +5498,7 @@ func (this *AuthUserService) GetGroupBySlug(slug string) (group *qortexapi.Group
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupBySlug.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupBySlug.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5553,7 +5553,7 @@ func (this *AuthUserService) GetGroups(keyword string) (groups []*qortexapi.Grou
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroups.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroups.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5608,7 +5608,7 @@ func (this *AuthUserService) GetEmbedGroups(keyword string) (groups []*qortexapi
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetEmbedGroups.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetEmbedGroups.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5663,7 +5663,7 @@ func (this *AuthUserService) GetPublicGroups(keyword string) (groups []*qortexap
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetPublicGroups.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetPublicGroups.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5718,7 +5718,7 @@ func (this *AuthUserService) AddUserToGroup(groupId string, userId string) (err 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AddUserToGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AddUserToGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5771,7 +5771,7 @@ func (this *AuthUserService) RemoveUserFromGroup(groupId string, userId string) 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/RemoveUserFromGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/RemoveUserFromGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5826,7 +5826,7 @@ func (this *AuthUserService) GetClassifiedGroups() (anouncementGroup *qortexapi.
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetClassifiedGroups.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetClassifiedGroups.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5888,7 +5888,7 @@ func (this *AuthUserService) GetAllGroupCollections() (gcs []*qortexapi.GroupCol
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetAllGroupCollections.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetAllGroupCollections.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5943,7 +5943,7 @@ func (this *AuthUserService) ToggleGroupArchiving(gids string, signal bool) (err
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ToggleGroupArchiving.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ToggleGroupArchiving.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -5998,7 +5998,7 @@ func (this *AuthUserService) BulkUpdateTasksInGroup(groupId string, taskPwMap []
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/BulkUpdateTasksInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/BulkUpdateTasksInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6053,7 +6053,7 @@ func (this *AuthUserService) UpdateCollection(gId string, colId string, colName 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateCollection.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateCollection.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6108,7 +6108,7 @@ func (this *AuthUserService) GetAllGroupUsers(groupId string) (uers []qortexapi.
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetAllGroupUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetAllGroupUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6165,7 +6165,7 @@ func (this *AuthUserService) GetGroupFiles(groupId string, before string, limit 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupFiles.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupFiles.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6217,7 +6217,7 @@ func (this *AuthUserService) GetAuthUser() (user *qortexapi.User, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetAuthUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetAuthUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6275,7 +6275,7 @@ func (this *AuthUserService) GetOrgUsers(keyword string, startFullName string, l
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrgUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrgUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6329,7 +6329,7 @@ func (this *AuthUserService) GetOrgAllUsers() (users []qortexapi.User, err error
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrgAllUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrgAllUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6389,7 +6389,7 @@ func (this *AuthUserService) GetGroupUsers(groupId string, keyword string, onlyF
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6446,7 +6446,7 @@ func (this *AuthUserService) GetUser(userId string) (user *qortexapi.User, err e
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6500,7 +6500,7 @@ func (this *AuthUserService) EnableUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/EnableUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/EnableUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6552,7 +6552,7 @@ func (this *AuthUserService) DisableUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DisableUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DisableUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6604,7 +6604,7 @@ func (this *AuthUserService) DeleteUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6656,7 +6656,7 @@ func (this *AuthUserService) PromoteToSuperUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/PromoteToSuperUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/PromoteToSuperUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6708,7 +6708,7 @@ func (this *AuthUserService) DemoteFromSuperUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DemoteFromSuperUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DemoteFromSuperUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6760,7 +6760,7 @@ func (this *AuthUserService) FollowUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/FollowUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/FollowUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6812,7 +6812,7 @@ func (this *AuthUserService) UnfollowUser(userId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UnfollowUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UnfollowUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6862,7 +6862,7 @@ func (this *AuthUserService) GetMyFollowingUsers() (followingUsers []qortexapi.U
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyFollowingUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyFollowingUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6914,7 +6914,7 @@ func (this *AuthUserService) GetPanelStatus() (panelStatus *qortexapi.PanelStatu
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetPanelStatus.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetPanelStatus.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -6966,7 +6966,7 @@ func (this *AuthUserService) GetUserPreferences() (preferences *qortexapi.Prefer
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetUserPreferences.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetUserPreferences.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7021,7 +7021,7 @@ func (this *AuthUserService) UpdateUserPreferences(input *qortexapi.PreferencesI
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateUserPreferences.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateUserPreferences.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7073,7 +7073,7 @@ func (this *AuthUserService) GetOrgEmbedUsers() (users []*qortexapi.EmbedUser, e
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrgEmbedUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrgEmbedUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7125,7 +7125,7 @@ func (this *AuthUserService) GetSharedAndPrivateGroupUsers() (groupUsers []*qort
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetSharedAndPrivateGroupUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetSharedAndPrivateGroupUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7178,7 +7178,7 @@ func (this *AuthUserService) GetAllUsers() (currentOrgUsers []*qortexapi.EmbedUs
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetAllUsers.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetAllUsers.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7234,7 +7234,7 @@ func (this *AuthUserService) UpdateUserProfile(input *qortexapi.UserProfileInput
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateUserProfile.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateUserProfile.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7286,7 +7286,7 @@ func (this *AuthUserService) SetPreferredLanguages(languageCodes []string) (err 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SetPreferredLanguages.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SetPreferredLanguages.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7339,7 +7339,7 @@ func (this *AuthUserService) ToggleGroupCol(gtype int, colIdStr string) (err err
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ToggleGroupCol.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ToggleGroupCol.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7389,7 +7389,7 @@ func (this *AuthUserService) GetMyCount() (myCount *qortexapi.MyCount, err error
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyCount.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyCount.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7445,7 +7445,7 @@ func (this *AuthUserService) ReadEntry(entryId string, groupId string) (myCount 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ReadEntry.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ReadEntry.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7501,7 +7501,7 @@ func (this *AuthUserService) ReadNotificationItem(itemId string, groupId string)
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ReadNotificationItem.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ReadNotificationItem.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7553,7 +7553,7 @@ func (this *AuthUserService) GetJoinOrgInvitations() (invitations []*qortexapi.I
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetJoinOrgInvitations.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetJoinOrgInvitations.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7608,7 +7608,7 @@ func (this *AuthUserService) GetOrganization(orgId string) (org *qortexapi.Organ
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7663,7 +7663,7 @@ func (this *AuthUserService) GetOrganizations(orgIds []string) (orgs []*qortexap
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7715,7 +7715,7 @@ func (this *AuthUserService) GetMyOrgsUnreadInfo() (unreadInfo []*qortexapi.OrgU
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyOrgsUnreadInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyOrgsUnreadInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7767,7 +7767,7 @@ func (this *AuthUserService) GetMyJoinedOrganizations() (orgs []*qortexapi.Organ
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyJoinedOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyJoinedOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7819,7 +7819,7 @@ func (this *AuthUserService) GetCurrentOrganization() (org *qortexapi.Organizati
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetCurrentOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetCurrentOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7874,7 +7874,7 @@ func (this *AuthUserService) SearchOrganizations(keyword string) (orgs []*qortex
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SearchOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SearchOrganizations.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7929,7 +7929,7 @@ func (this *AuthUserService) UpdateOrganization(input *qortexapi.OrganizationInp
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -7983,7 +7983,7 @@ func (this *AuthUserService) SwitchOrganization(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SwitchOrganization.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SwitchOrganization.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8032,7 +8032,7 @@ func (this *AuthUserService) MarkAsSampleOrg() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MarkAsSampleOrg.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MarkAsSampleOrg.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8081,7 +8081,7 @@ func (this *AuthUserService) MarkAsStandardOrg() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MarkAsStandardOrg.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MarkAsStandardOrg.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8131,7 +8131,7 @@ func (this *AuthUserService) GetSampleOrgs() (orgs []*qortexapi.Organization, er
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetSampleOrgs.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetSampleOrgs.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8183,7 +8183,7 @@ func (this *AuthUserService) GetSandboxOrgs() (orgs []*qortexapi.Organization, e
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetSandboxOrgs.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetSandboxOrgs.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8237,7 +8237,7 @@ func (this *AuthUserService) DeleteSandboxOrg(orgId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteSandboxOrg.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteSandboxOrg.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8286,7 +8286,7 @@ func (this *AuthUserService) DeleteAllSandboxOrg() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteAllSandboxOrg.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteAllSandboxOrg.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8338,7 +8338,7 @@ func (this *AuthUserService) AcceptShareRequestByAdmin(requestId string) (err er
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AcceptShareRequestByAdmin.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AcceptShareRequestByAdmin.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8390,7 +8390,7 @@ func (this *AuthUserService) RejectShareRequestByAdmin(requestId string) (err er
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/RejectShareRequestByAdmin.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/RejectShareRequestByAdmin.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8439,7 +8439,7 @@ func (this *AuthUserService) StartTrial() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/StartTrial.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/StartTrial.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8489,7 +8489,7 @@ func (this *AuthUserService) GetOrgSettings() (orgSetting *qortexapi.OrgSettings
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrgSettings.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrgSettings.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8543,7 +8543,7 @@ func (this *AuthUserService) UpdateOrgSettings(orgSettingInput *qortexapi.OrgSet
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateOrgSettings.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateOrgSettings.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8595,7 +8595,7 @@ func (this *AuthUserService) UpdateOrgResctriction(orgSettingInput *qortexapi.Or
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateOrgResctriction.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateOrgResctriction.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8645,7 +8645,7 @@ func (this *AuthUserService) CanCreateGroup() (ok bool, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CanCreateGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CanCreateGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8697,7 +8697,7 @@ func (this *AuthUserService) CanInvitePeople() (ok bool, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CanInvitePeople.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CanInvitePeople.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8756,7 +8756,7 @@ func (this *AuthUserService) InvitePeople(emails []string, allowEmpty bool, skip
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/InvitePeople.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/InvitePeople.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8810,7 +8810,7 @@ func (this *AuthUserService) CancelInvitation(email string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CancelInvitation.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CancelInvitation.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8862,7 +8862,7 @@ func (this *AuthUserService) ResendInvitation(email string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ResendInvitation.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ResendInvitation.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8915,7 +8915,7 @@ func (this *AuthUserService) UpdateGroupAdvancedToDoSettings(groupId string, inp
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateGroupAdvancedToDoSettings.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateGroupAdvancedToDoSettings.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -8967,7 +8967,7 @@ func (this *AuthUserService) UpdateNotificationsPreference(input *qortexapi.Noti
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateNotificationsPreference.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateNotificationsPreference.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9020,7 +9020,7 @@ func (this *AuthUserService) PrepareChangingEmail(newEmail string) (changer *qor
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/PrepareChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/PrepareChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9074,7 +9074,7 @@ func (this *AuthUserService) ConfirmChangingEmail(token string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ConfirmChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ConfirmChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9126,7 +9126,7 @@ func (this *AuthUserService) UpdateAccount(input *qortexapi.MemberAccountInput) 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateAccount.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateAccount.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9181,7 +9181,7 @@ func (this *AuthUserService) SendShareRequest(groupId string, email string, mess
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SendShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SendShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9237,7 +9237,7 @@ func (this *AuthUserService) SendShareRequestToOrg(groupId string, toOrgId strin
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SendShareRequestToOrg.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SendShareRequestToOrg.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9292,7 +9292,7 @@ func (this *AuthUserService) GetShareRequests(groupId string) (sis []*qortexapi.
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetShareRequests.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetShareRequests.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9346,7 +9346,7 @@ func (this *AuthUserService) CancelShareRequest(requestId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CancelShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CancelShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9398,7 +9398,7 @@ func (this *AuthUserService) StopSharingGroup(requestId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/StopSharingGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/StopSharingGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9447,7 +9447,7 @@ func (this *AuthUserService) DismissPresentationTip() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DismissPresentationTip.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DismissPresentationTip.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9496,7 +9496,7 @@ func (this *AuthUserService) DismissTutorialsTip() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DismissTutorialsTip.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DismissTutorialsTip.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9546,7 +9546,7 @@ func (this *AuthUserService) GetMyChats() (chats []*qortexapi.Chat, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyChats.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyChats.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9601,7 +9601,7 @@ func (this *AuthUserService) GetMyChatWithUser(userIdHex string) (chat *qortexap
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyChatWithUser.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyChatWithUser.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9659,7 +9659,7 @@ func (this *AuthUserService) GetChatHistory(chatIdHex string, before string, lim
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetChatHistory.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetChatHistory.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9717,7 +9717,7 @@ func (this *AuthUserService) GetMyChatEntries(before string, limit int) (entries
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetMyChatEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetMyChatEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9772,7 +9772,7 @@ func (this *AuthUserService) CreateQortexSupport(input *qortexapi.QortexSupportI
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9827,7 +9827,7 @@ func (this *AuthUserService) CreateQortexSupportComment(input *qortexapi.QortexS
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CreateQortexSupportComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CreateQortexSupportComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9883,7 +9883,7 @@ func (this *AuthUserService) GetQortexSupport(entryId string, languageCode strin
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9939,7 +9939,7 @@ func (this *AuthUserService) EditQortexSupport(entryId string, languageCode stri
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/EditQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/EditQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -9994,7 +9994,7 @@ func (this *AuthUserService) GetQortexSupportComment(entryId string) (entry *qor
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetQortexSupportComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetQortexSupportComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10049,7 +10049,7 @@ func (this *AuthUserService) UpdateQortexSupport(input *qortexapi.QortexSupportI
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateQortexSupport.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10104,7 +10104,7 @@ func (this *AuthUserService) UpdateQortexSupportComment(input *qortexapi.QortexS
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateQortexSupportComment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateQortexSupportComment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10159,7 +10159,7 @@ func (this *AuthUserService) GetQortexSupportHelpLink(title string) (link string
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetQortexSupportHelpLink.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetQortexSupportHelpLink.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10214,7 +10214,7 @@ func (this *AuthUserService) SendQortexSupportTestingEmail(entryId string, userI
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SendQortexSupportTestingEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SendQortexSupportTestingEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10267,7 +10267,7 @@ func (this *AuthUserService) NewTask(groupId string) (task *qortexapi.Task, err 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/NewTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/NewTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10323,7 +10323,7 @@ func (this *AuthUserService) EditTask(groupId string, taskId string) (task *qort
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/EditTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/EditTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10379,7 +10379,7 @@ func (this *AuthUserService) ClaimTask(taskId string, groupId string) (task *qor
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ClaimTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ClaimTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10434,7 +10434,7 @@ func (this *AuthUserService) UpdateSimpleTask(input *qortexapi.TaskInput) (task 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UpdateSimpleTask.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UpdateSimpleTask.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10487,7 +10487,7 @@ func (this *AuthUserService) GetTasksForMe() (needActionTasks []*qortexapi.TaskO
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetTasksForMe.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetTasksForMe.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10541,7 +10541,7 @@ func (this *AuthUserService) GetOpenTasksIMade() (groupTasks []*qortexapi.GroupT
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOpenTasksIMade.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOpenTasksIMade.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10597,7 +10597,7 @@ func (this *AuthUserService) GetClosedTasksIMade(before string, limit int) (task
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetClosedTasksIMade.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetClosedTasksIMade.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10649,7 +10649,7 @@ func (this *AuthUserService) GetOpenTasksIWorkedOn() (groupTasks []*qortexapi.Gr
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOpenTasksIWorkedOn.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOpenTasksIWorkedOn.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10705,7 +10705,7 @@ func (this *AuthUserService) GetClosedTasksIWorkedOn(before string, limit int) (
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetClosedTasksIWorkedOn.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetClosedTasksIWorkedOn.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10762,7 +10762,7 @@ func (this *AuthUserService) GetTasksOutline(userId string, groupId string) (nee
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetTasksOutline.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetTasksOutline.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10820,7 +10820,7 @@ func (this *AuthUserService) GetTasks(userId string, groupId string) (groupTasks
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetTasks.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetTasks.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10877,7 +10877,7 @@ func (this *AuthUserService) GetOpenTodos(createByUid string, assignToUid string
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOpenTodos.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOpenTodos.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10935,7 +10935,7 @@ func (this *AuthUserService) GetCloseTodos(createByUid string, assignToUid strin
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetCloseTodos.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetCloseTodos.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -10990,7 +10990,7 @@ func (this *AuthUserService) GetGroupGeneralSettingPage(gId string) (page *qorte
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupGeneralSettingPage.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupGeneralSettingPage.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11045,7 +11045,7 @@ func (this *AuthUserService) GetGroupUsersPage(gId string) (page *qortexapi.Grou
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupUsersPage.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupUsersPage.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11100,7 +11100,7 @@ func (this *AuthUserService) GetGroupSharingExternallyPage(gId string) (page *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupSharingExternallyPage.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupSharingExternallyPage.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11155,7 +11155,7 @@ func (this *AuthUserService) GetGroupAdvancedToDoSetting(gId string) (page *qort
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetGroupAdvancedToDoSetting.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetGroupAdvancedToDoSetting.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11210,7 +11210,7 @@ func (this *AuthUserService) AllOpenAdvancedToDosInGroup(groupId string) (bucket
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11265,7 +11265,7 @@ func (this *AuthUserService) AllOpenAdvancedToDosGroupingByUserInGroup(groupId s
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosGroupingByUserInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosGroupingByUserInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11321,7 +11321,7 @@ func (this *AuthUserService) AllOpenAdvancedToDosGroupingByStatusInGroup(groupId
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosGroupingByStatusInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosGroupingByStatusInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11379,7 +11379,7 @@ func (this *AuthUserService) AllOpenAdvancedToDosGroupingByLabelInGroup(groupId 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosGroupingByLabelInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllOpenAdvancedToDosGroupingByLabelInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11436,7 +11436,7 @@ func (this *AuthUserService) AllOpenBasicToDosInGroup(groupId string) (taskOutli
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllOpenBasicToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllOpenBasicToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11491,7 +11491,7 @@ func (this *AuthUserService) AllOpenBasicToDosGroupingByUserInGroup(groupId stri
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllOpenBasicToDosGroupingByUserInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllOpenBasicToDosGroupingByUserInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11547,7 +11547,7 @@ func (this *AuthUserService) AllClosedBasicToDosInGroup(groupId string, afterTim
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllClosedBasicToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllClosedBasicToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11602,7 +11602,7 @@ func (this *AuthUserService) AllClosedAdvancedToDosInGroup(groupId string) (clos
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/AllClosedAdvancedToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/AllClosedAdvancedToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11661,7 +11661,7 @@ func (this *AuthUserService) MoreClosedAdvancedToDosWithStatusInGroup(groupId st
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/MoreClosedAdvancedToDosWithStatusInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/MoreClosedAdvancedToDosWithStatusInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11721,7 +11721,7 @@ func (this *AuthUserService) CountOfClosedToDosInGroup(ttype int, groupId string
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CountOfClosedToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CountOfClosedToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11776,7 +11776,7 @@ func (this *AuthUserService) CountOfActionNeededToDosInGroup(gid string) (count 
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CountOfActionNeededToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CountOfActionNeededToDosInGroup.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11833,7 +11833,7 @@ func (this *AuthUserService) ToDoCSV(groupId string, userId string, month string
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ToDoCSV.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ToDoCSV.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11887,7 +11887,7 @@ func (this *AuthUserService) RegisterAppleDevice(token string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/RegisterAppleDevice.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/RegisterAppleDevice.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11939,7 +11939,7 @@ func (this *AuthUserService) UnregisterAppleDevice(token string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UnregisterAppleDevice.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UnregisterAppleDevice.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -11991,7 +11991,7 @@ func (this *AuthUserService) RegisterAndroidDevice(regid string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/RegisterAndroidDevice.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/RegisterAndroidDevice.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12043,7 +12043,7 @@ func (this *AuthUserService) UnregisterAndroidDevice(regid string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UnregisterAndroidDevice.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/UnregisterAndroidDevice.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12093,7 +12093,7 @@ func (this *AuthUserService) GetPaymentSession() (session string, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetPaymentSession.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetPaymentSession.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12145,7 +12145,7 @@ func (this *AuthUserService) CanSeeBilling() (yes bool, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CanSeeBilling.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CanSeeBilling.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12197,7 +12197,7 @@ func (this *AuthUserService) GetBillingInfo() (billing *qortexapi.BillingInfo, e
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetBillingInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetBillingInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12252,7 +12252,7 @@ func (this *AuthUserService) GetReceiptInfo(id string) (receipt *qortexapi.Recei
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetReceiptInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetReceiptInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12303,7 +12303,7 @@ func (this *AuthUserService) SyncBilling() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SyncBilling.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SyncBilling.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12352,7 +12352,7 @@ func (this *AuthUserService) SyncBillingDetails() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SyncBillingDetails.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SyncBillingDetails.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12401,7 +12401,7 @@ func (this *AuthUserService) ValidatePayment() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ValidatePayment.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ValidatePayment.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12450,7 +12450,7 @@ func (this *AuthUserService) CancelSubscription() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/CancelSubscription.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/CancelSubscription.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12499,7 +12499,7 @@ func (this *AuthUserService) DismissPaymentTips() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DismissPaymentTips.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DismissPaymentTips.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12552,7 +12552,7 @@ func (this *AuthUserService) DisableProFeatrue(groupId string) (r bool, err erro
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DisableProFeatrue.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DisableProFeatrue.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12604,7 +12604,7 @@ func (this *AuthUserService) GetContactUsInfo() (info *qortexapi.ContactUsInfo, 
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetContactUsInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetContactUsInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12656,7 +12656,7 @@ func (this *AuthUserService) GetInitInfo() (info *qortexapi.InitInfo, err error)
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetInitInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetInitInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12708,7 +12708,7 @@ func (this *AuthUserService) GetNewInitInfo() (info *qortexapi.InitInfo, err err
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetNewInitInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetNewInitInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12750,64 +12750,6 @@ func (this *AuthUserService) GetNewInitInfo() (info *qortexapi.InitInfo, err err
 	return
 }
 
-type authUserService_UploadFile_Results struct {
-	ApiAtt *qortexapi.Attachment
-	Err    SerializableError
-}
-
-func (this *AuthUserService) UploadFile(entryId string, gId string, fileName string, contentType string) (apiAtt *qortexapi.Attachment, err error) {
-	bodyMap := make(map[string]interface{})
-	bodyMap["This"] = this
-	paramsMap := make(map[string]interface{})
-	paramsMap["EntryId"] = entryId
-	paramsMap["GId"] = gId
-	paramsMap["FileName"] = fileName
-	paramsMap["ContentType"] = contentType
-	bodyMap["Params"] = paramsMap
-
-	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/UploadFile.json", bytes.NewReader(ToJson(bodyMap)))
-	request.Header.Add("Accept-Encoding", "gzip")
-
-	response, err := client.Do(request)
-	if err != nil {
-		printStackAndError(err)
-		return
-	}
-
-	if response == nil || response.Body == nil {
-		return
-	}
-	defer response.Body.Close()
-
-	if response.StatusCode >= 300 {
-		err = errors.New("request url: " + request.URL.String() + "status: " + response.Status)
-		return
-	}
-
-	// Check that the server actually sent compressed data
-	var reader io.ReadCloser
-	switch response.Header.Get("Content-Encoding") {
-	case "gzip":
-		reader, err = gzip.NewReader(response.Body)
-	default:
-		reader = response.Body
-	}
-
-	var result authUserService_UploadFile_Results
-	dec := json.NewDecoder(reader)
-	if e := dec.Decode(&result); e != nil {
-		printStackAndError(e)
-		// No return
-	}
-
-	apiAtt = result.ApiAtt
-
-	err = result.Err.toError()
-
-	return
-}
-
 type authUserService_DeleteFile_Results struct {
 	Attachments []*qortexapi.Attachment
 	Err         SerializableError
@@ -12823,7 +12765,7 @@ func (this *AuthUserService) DeleteFile(groupId string, attachmentId string, own
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteFile.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteFile.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12878,7 +12820,7 @@ func (this *AuthUserService) Search(sp qortexapi.SearchInput) (sr qortexapi.Sear
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/Search.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/Search.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12929,7 +12871,7 @@ func (this *AuthUserService) ValidateToken() (err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ValidateToken.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ValidateToken.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -12986,7 +12928,7 @@ func (this *AuthUserService) SaveToken(tokenId string, label string, accessLevel
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/SaveToken.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/SaveToken.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13040,7 +12982,7 @@ func (this *AuthUserService) DeleteToken(tokenId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/DeleteToken.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/DeleteToken.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13090,7 +13032,7 @@ func (this *AuthUserService) GetOrgTokens() (tokens []*qortexapi.Token, err erro
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/GetOrgTokens.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/GetOrgTokens.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13145,7 +13087,7 @@ func (this *AuthUserService) ZapierSubscribe(input qortexapi.ZapierSubscribeInpu
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ZapierSubscribe.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ZapierSubscribe.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13199,7 +13141,7 @@ func (this *AuthUserService) ZapierUnsubscribe(webhookId string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/AuthUserService/ZapierUnsubscribe.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/AuthUserService/ZapierUnsubscribe.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13258,7 +13200,7 @@ func (this *PublicService) GetSession(email string, password string, locale stri
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetSession.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetSession.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13314,7 +13256,7 @@ func (this *PublicService) GetSessionByToken(token string, locale string) (sessi
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetSessionByToken.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetSessionByToken.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13377,7 +13319,7 @@ func (this *PublicService) GetAuthorizedAdmin(session string) (apiEmbedUser qort
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetAuthorizedAdmin.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetAuthorizedAdmin.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13436,7 +13378,7 @@ func (this *PublicService) ViaHTTPS() (ok bool, err error) {
 	bodyMap["This"] = this
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/ViaHTTPS.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/ViaHTTPS.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13490,7 +13432,7 @@ func (this *PublicService) FindPassword(email string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/FindPassword.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/FindPassword.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13546,7 +13488,7 @@ func (this *PublicService) ResetPassword(token string, password string, confirme
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/ResetPassword.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/ResetPassword.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13606,7 +13548,7 @@ func (this *PublicService) PrepareChangingEmail(memberId string, newEmail string
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/PrepareChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/PrepareChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13663,7 +13605,7 @@ func (this *PublicService) ConfirmChangingEmail(token string) (activationToken s
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/ConfirmChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/ConfirmChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13721,7 +13663,7 @@ func (this *PublicService) CancelChangingEmail(token string) (err error) {
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/CancelChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/CancelChangingEmail.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13774,7 +13716,7 @@ func (this *PublicService) ChangeEmailToAcceptSharing(token string, newEmail str
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/ChangeEmailToAcceptSharing.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/ChangeEmailToAcceptSharing.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13828,7 +13770,7 @@ func (this *PublicService) GetShareRequest(token string, memberId string) (share
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetShareRequest.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13883,7 +13825,7 @@ func (this *PublicService) ContactUs(input *qortexapi.ContactInput) (contact *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/ContactUs.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/ContactUs.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -13942,7 +13884,7 @@ func (this *PublicService) GetBlogEntries(doi string, pageNum int, limit int) (b
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetBlogEntries.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetBlogEntries.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14003,7 +13945,7 @@ func (this *PublicService) GetBlogEntryBySlug(doi string, slug string) (blog *qo
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetBlogEntryBySlug.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetBlogEntryBySlug.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14061,7 +14003,7 @@ func (this *PublicService) GenerateBlogEntrySlug(doi string, slug string) (valid
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GenerateBlogEntrySlug.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GenerateBlogEntrySlug.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14116,7 +14058,7 @@ func (this *PublicService) CreateNewsletter(input *qortexapi.NewsletterInput) (n
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/CreateNewsletter.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/CreateNewsletter.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14171,7 +14113,7 @@ func (this *PublicService) InviteMe(organizationId string, email string) (err er
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/InviteMe.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/InviteMe.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14224,7 +14166,7 @@ func (this *PublicService) CreateSandboxOrg(idOrQortexURL string) (r *qortexapi.
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/CreateSandboxOrg.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/CreateSandboxOrg.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14279,7 +14221,7 @@ func (this *PublicService) CreateSandboxMember(mi *qortexapi.MemberAccountInput)
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/CreateSandboxMember.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/CreateSandboxMember.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
@@ -14334,7 +14276,7 @@ func (this *PublicService) GetPushInfo(itemId string) (info *qortexapi.PushInfo,
 	bodyMap["Params"] = paramsMap
 
 	client := new(http.Client)
-	request, err := http.NewRequest("Post", ApiDomain+"/PublicService/GetPushInfo.json", bytes.NewReader(ToJson(bodyMap)))
+	request, err := http.NewRequest("POST", ApiDomain+"/PublicService/GetPushInfo.json", bytes.NewReader(ToJson(bodyMap)))
 	request.Header.Add("Accept-Encoding", "gzip")
 
 	response, err := client.Do(request)
